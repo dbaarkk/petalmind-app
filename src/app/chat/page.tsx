@@ -1268,10 +1268,10 @@ export default function ChatPage() {
                                         <pre className="p-4 m-0">
                                           <code className="text-xs text-gray-200 font-mono whitespace-pre">{codeString}</code>
                                         </pre>
+                                        </div>
                                       </div>
-                                    </div>
-                                  )
-                                }
+                                    )
+                                  }
                                 
                                 return (
                                   <code className="bg-white/10 px-1.5 py-0.5 rounded text-xs font-mono text-gray-200" {...props}>
@@ -1515,6 +1515,7 @@ export default function ChatPage() {
           </div>
         </div>
       </div>
+    </div>
 
       {/* Settings Modal */}
       <AnimatePresence>
@@ -1657,7 +1658,8 @@ export default function ChatPage() {
             </motion.div>
           </div>
         )}
-      </AnimatePresence>
+        </AnimatePresence>
+      </div>
     </div>
   )
 }
