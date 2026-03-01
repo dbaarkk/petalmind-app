@@ -367,10 +367,7 @@ export async function POST(req: Request) {
       }
     }
 
-    // Try OpenAI first, fallback to Groq (web search context already added)
-    try {
-      return await tryOpenAI()
-    } catch (e: any) {
+       return await tryGroq()
       const msg = String(e?.message || "")
       console.error("[OpenAI Error]", msg, e)
       const isQuota = msg.includes("429") || msg.toLowerCase().includes("quota")
